@@ -1309,13 +1309,15 @@ class FormBuilder
             return $request;
         }
 
-        if (! is_null($value)) {
-            return $value;
-        }
 
         if (isset($this->model)) {
             return $this->getModelValueAttribute($name);
         }
+        
+        if (! is_null($value)) {
+            return $value;
+        }
+
     }
 
     /**
